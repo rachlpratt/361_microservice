@@ -7,13 +7,21 @@ app = Flask(__name__)
 @app.route('/due/<due_date>', methods=['GET'])
 def generate_message(due_date):
     # Get integer values for month, day, year
-    month = int(due_date[:2])
-    day = int(due_date[3:5])
-    year = int(due_date[6:])
+    try:
+        month = int(due_date[:2])
+        day = int(due_date[3:5])
+        year = int(due_date[6:])
+    except ValueError:
+        return jsonify(message="Invalid input")
 
-    # Get today's date and format due_date
+    # Get today's date
     today = date.today()
-    new_due_date = date(year, month, day)
+
+    # Format due date
+    try:
+        new_due_date = date(year, month, day)
+    except ValueError:
+        return jsonify(message="Invalid date")
 
     # Calculate number of days between today and due_date
     diff = new_due_date - today
