@@ -10,12 +10,12 @@ Send a GET request to the following URL:
 http://localhost:8080/due/{date}
 
 **A few things to note:**
--In place of {date}, include the due date in MM-DD-YYY format.
--Include dashes between the month, day, and year.
--The port number must be 8080.
+* In place of {date}, include the due date in MM-DD-YYY format.
+* Include dashes between the month, day, and year.
+* The port number must be 8080.
 
 Example URL:
-http://localhost:8080/due/03-14-2023
+http://localhost:8080/due/03-14-2023  
 (The due date is March 14th, 2023)
 
 ## To Receive Data:
