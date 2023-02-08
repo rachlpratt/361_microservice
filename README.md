@@ -33,3 +33,6 @@ def get_message(date):
     return json_data['message']
 ```
 Calling **get_message('02-11-2023')** will return the string **'in 3 days'** if today's date is 02-08-2023.
+
+## UML Diagram:
+![image](UML_Diagram.png)
