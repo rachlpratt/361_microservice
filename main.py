@@ -43,11 +43,9 @@ def generate_message(due_date):
             message = f'{int(days / -7)} weeks ago'
         case 14 | 21:
             message = f'in {int(days / 7)} weeks'
-        case _ if -1 > days > -21:
-            message = f'{days * -1} days ago'
         case _ if 1 < days < 21:
             message = f'in {days} days'
-        case _ if days < -21:
+        case _ if days < -1:
             message = f'{days * -1} days ago'
         case _:
             message = f'{due_date}'
