@@ -19,7 +19,8 @@ http://localhost:8080/due/03-14-2023
 (The due date is March 14th, 2023)
 
 ## To Receive Data:
-After the request has been made, obtain the text from the HTTP reponse and parse the JSON data using the language of your choice.
+After the request has been made, obtain the text from the HTTP response and parse the JSON data using the language of your choice.  
+The JSON object returned will contain one key-value pair: a key "message" and a value containing the message string.
 
 **Example Python script:**
 ```sh
